@@ -1,0 +1,22 @@
+{
+  "name": "liri",
+  "version": "0.0.1",
+  "description": "node cli app",
+  "main": "liri.js",
+  "scripts": {
+    "test": "sevens"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaboybakes/node-cli-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaboybakes/node-cli-app/issues"
+  },
+  "homepage": "https://github.com/yaboybakes/node-cli-app",
+  "dependencies": {
+    "twitter": "^1.4.0"
+  }
+}
