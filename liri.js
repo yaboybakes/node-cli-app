@@ -6,7 +6,7 @@ const fs = require('fs');
 var getMyTweets = function() {
     var client = new Twitter(keys.twitterK eys);
 
-    var params = {screen_name: 'inrtracker'};
+    var params = {screen_name: 'your-twitter-name'};
     client.get('statuses/user_timeline',params,function(error,tweets,response) {
       if (!error) {
         for (var i = 0; i < tweets.length; i++) {
