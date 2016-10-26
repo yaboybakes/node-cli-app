@@ -1,6 +1,7 @@
 const keys = require('./keys.js');
 const Twitter = require('twitter');
 const request = require('request');
+const fs = require('fs');
 
 var getMyTweets = function() {
     var client = new Twitter(keys.twitterK eys);
@@ -47,6 +48,20 @@ var getMeMovie = function(movieName) {
   })
 }
 
+var doWhatItSays = function() {
+  fs.readFile('random.txt','utf8',function(err,data) {
+    if (err)
+    throw err;
+    var array = data.split(',');
+
+    if (array.length == 2) {
+      pick(array[0],array[1]);
+    } else if (array.length == 1) {
+      pick(array[0]);
+    }
+  });
+}
+
 var pick = function(caseData, functionData) {
   switch(caseData) {
     case 'my-tweets' :
@@ -55,8 +70,14 @@ var pick = function(caseData, functionData) {
     case 'spotify-this-song':
       getMeSpotify(functionData);
       break;
+    case 'movie-this':
+      getMeMovie(functionData);
+      break;
+    case 'do-what-it-says':
+      doWhatItSays();
+      break;
     default:
-    console.log("LIRI does not know that");
+      console.log("LIRI does not know that command");
   }
 }
 
