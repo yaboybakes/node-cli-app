@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/yaboybakes/node-cli-app",
   "dependencies": {
+    "request": "^2.76.0",
+    "spotify": "^0.3.0",
     "twitter": "^1.4.0"
   }
 }
